@@ -123,6 +123,9 @@ https://assetstore.unity.com/packages/3d/environments/landscapes/terrain-sample-
 ### Verschiedene Materials und Texturen für eure Objekte:
 https://assetstore.unity.com/?free=true&q=materials&orderBy=1
 
+### Third Person Controller:
+https://assetstore.unity.com/packages/essentials/starter-assets-third-person-character-controller-196526
+
 ### Sonstige Objekte: Einfach fragen, ich kann euch gerne beim suchen helfen.
 
 ### Car controller:
