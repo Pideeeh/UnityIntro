@@ -111,3 +111,19 @@ private void OnCollisionEnter(UnityEngine.Collision collision)
         Destroy(gameObject);
     }
 ```
+
+
+# Nützliche Basiskomponenten aus dem Asset store:
+### First Person Controller:
+https://assetstore.unity.com/packages/3d/characters/modular-first-person-controller-189884
+
+### Terrain Pack (für schöne Landschaften)
+https://assetstore.unity.com/packages/3d/environments/landscapes/terrain-sample-asset-pack-145808
+
+### Verschiedene Materials und Texturen für eure Objekte:
+https://assetstore.unity.com/?free=true&q=materials&orderBy=1
+
+### Sonstige Objekte: Einfach fragen, ich kann euch gerne beim suchen helfen.
+
+### Car controller:
+-> Meldet euch bei mir.
