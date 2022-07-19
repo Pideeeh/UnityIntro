@@ -18,7 +18,7 @@ Beschreibt Verhalten eines Objektes (code)
 ### Physics Material:
 Beschreibt physikalisches Verhalten eines Objektes (Bounciness, Reibung)
 
-# Hier sind ein paar kleine Code teile die ihr euch zusammenkopieren könnt:
+# Hier sind ein paar kleine Code Teile die ihr euch zusammenkopieren könnt:
 
 ## Ich möchte dass etwas bei Tastenklick passiert:
 Welches Objekt betrifft das "etwas"? -> Gehe zum Unity Editor, füge neues Script auf das jeweilige Objekt
@@ -70,4 +70,44 @@ public GameObject spawnObject;
 
 ```
         Instantiate(spawnObject, transform.position, transform.rotation);
+```
+
+## Ich möchte auf eine Kollision reagieren:
+Das objekt das reagieren soll benötigt einen Collider und ein Script:
+
+Im script: 
+```
+private void OnCollisionEnter(UnityEngine.Collision collision)
+    {
+       // code ... was soll bei collision passieren.   
+    }
+```
+
+
+## Ich möchte wissen mit welchem Objekt A ein Objekt B kollidiert:
+Das objekt das reagieren soll benötigt einen Collider und ein Script:
+
+1. Das Objekt das ihr behandeln wollt Taggen: (Im Unity Editor)
+![image](https://user-images.githubusercontent.com/4976623/179763756-de7028ea-ded9-4b2b-b04b-75f232ed306e.png)
+
+
+2. Im script: 
+```
+private void OnCollisionEnter(UnityEngine.Collision collision)
+    {
+        if (collision.gameObject.CompareTag("MyTag"))
+        {
+            // dieser code wird ausgeführt wenn dieses Objekt mit dem "MyTag" objekt kollidiert
+        }
+    }
+```
+
+## Ich möchte ein Objekt zerstören sobald es kollidiert:
+Das objekt das reagieren soll benötigt einen Collider und ein Script:
+1. Im script: 
+```
+private void OnCollisionEnter(UnityEngine.Collision collision)
+    {
+        Destroy(gameObject);
+    }
 ```
