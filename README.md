@@ -4,3 +4,70 @@ This is a collection of Unity focused C# snippets to introduce users with low or
 
 # Hier findet ihr kleine Beispiele für Unity Scripts.
 ## Ihr könnt euch gerne teile rauskopieren und für eure eigenen Scripts wiederverwenden
+
+
+
+# Hier sind die Objekttypen die ihr verwenden werdet:
+
+### Material:
+Beschreibt Farbe und Erscheinungsbild eines Objektes
+
+### Script:
+Beschreibt Verhalten eines Objektes (code)
+
+### Physics Material:
+Beschreibt physikalisches Verhalten eines Objektes (Bounciness, Reibung)
+
+# Hier sind ein paar kleine Code teile die ihr euch zusammenkopieren könnt:
+
+## Ich möchte dass etwas bei Tastenklick passiert:
+Welches Objekt betrifft das "etwas"? -> Gehe zum Unity Editor, füge neues Script auf das jeweilige Objekt
+
+Tastendruck: In der Update Methode im neu erstellten Script:
+```
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+         // der code hier wird ausgeführt wenn die Leertaste gedrückt wird  
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            // der code hier wird ausgeführt wenn die Leertaste losgelassen wird  
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            // der code hier wird ausgeführt solange die Leertaste gedrückt wird  
+        }
+```
+Keycode kann natürlich auf die gewünschte Taste geändert werden: siehe: https://docs.unity3d.com/ScriptReference/KeyCode.html
+
+## Ich möchte die Farbe eines Objektes ändern:
+1. Unter Zeile mit "class" einfügen: (Dann wird das Material im Unity Editor konfigurierbar)
+```
+public Material mat1;
+```
+2. Zu dem Zeitpunkt im code an dem der Farbwechsel passieren soll:
+
+```
+        GetComponent<MeshRenderer>().material = mat1;
+```
+
+## Ich möchte das Spiel neu starten (Spieler hat verloren):
+```
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+```
+
+## Ich möchte ein Objekt (mit Rigidbody bewegen, z.B. springen lassen):
+```
+        GetComponent<Rigidbody>().velocity = Vector3.up * 3;
+```
+
+## Ich möchte ein Objekt klonen (spawnen):
+1. Unter Zeile mit "class" einfügen: (Dann wird das Material im Unity Editor konfigurierbar)
+```
+public GameObject spawnObject;
+```
+2. Zu dem Zeitpunkt im code an dem der Spawn passieren soll:
+
+```
+        Instantiate(spawnObject, transform.position, transform.rotation);
+```
